@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -14,9 +15,9 @@ body {
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: initial;
   align-items: center;
   flex-direction: column;
   background-color: #ffff;
@@ -121,7 +122,7 @@ body {
   flex-direction: column;
   /* justify-content: space-around; */
   justify-content: space;
-  align-items: start ;
+  align-items: start;
   width: 100%;
   font-family: "Quicksand", sans-serif;
 }
@@ -168,19 +169,19 @@ body {
 }
 
 .text-row span {
-
   color: rgb(34, 33, 33);
   font-family: "Quicksand", sans-serif;
   padding-right: 12px;
 }
 
-/* .card .text-div p:nth-of-type(2) {
-  background-color: #495057;
+.regions {
+  display: flex;
+  justify-self: start;
+  margin: 0;
 }
-
-.card .text-div p:nth-of-type(3) {
-  background-color: #343a40;
-} */
+.regions p {
+  font: 0.75rem "Quicksand", sans-serif;
+}
 @media screen and (max-width: 1008px) {
   #svg-map {
     width: 90vw;

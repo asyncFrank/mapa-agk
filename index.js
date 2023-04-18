@@ -1,27 +1,3 @@
-let unidades = [
-  {
-    uid: 1,
-    uf: "AL",
-    state: "Alagoas",
-    _data: "01 de Janeiro a 01 de Abril",
-    _regiao: " ",
-  },
-  {
-    uid: 2,
-    uf: "AP",
-    state: "Amapá",
-    _data: "01 de Dezembro a 28 de Fevereiro",
-    _regiao: " ",
-  },
-  {
-    uid: 3,
-    uf: "AC",
-    state: "Acre",
-    _data: "22 de Junho a 20 de Setembro",
-    _regiao: " ",
-  },
-];
-
 const createTextRow = (div, text, qtd, image) => {
   const myimage = document.createElement("img");
   let base_url =
@@ -45,6 +21,10 @@ const createTextRow = (div, text, qtd, image) => {
   div.appendChild(myimage);
   div.appendChild(p);
   div.appendChild(span);
+};
+const createInfoRegions = (text) => {
+  const regionText = document.querySelector("body > div.regions > p");
+  regionText.innerText = text;
 };
 
 const createCard = (name, death, suspect, cases, uf) => {
@@ -113,12 +93,12 @@ const createCard = (name, death, suspect, cases, uf) => {
       let data = await fetch(
         // `https://backend-provi.vercel.app/api/periods/uf?uf=${sigla}`
         `https://nodedeploy-api-uubc.onrender.com/periods/period/${sigla}`
-        
       );
       console.log(data);
 
-      const { uf, period } = await data.json();
-      console.log(period);
+      const { period, region } = await data.json();
+
+      createInfoRegions(region);
       createCard(name, "", "", period, sigla);
     };
   }
