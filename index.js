@@ -4,10 +4,10 @@ const createTextRow = (div, text, qtd, image) => {
     window.location.origin +
     "/" +
     window.location.pathname.split("/")[1] +
-    "/" +
-    window.location.pathname.split("/")[2] +
-    "/" +
-    window.location.pathname.split("/")[3];
+//     "/" +
+//     window.location.pathname.split("/")[2] +
+//     "/" +
+//     window.location.pathname.split("/")[3];
 
   console.log(base_url);
   myimage.src = `${base_url}/${image}`;
