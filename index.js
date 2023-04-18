@@ -3,7 +3,8 @@ const createTextRow = (div, text, qtd, image) => {
   let base_url =
     window.location.origin +
     "/" +
-    window.location.pathname.split("/")[1] +
+    window.location.pathname.split("/")[1] 
+//   +
 //     "/" +
 //     window.location.pathname.split("/")[2] +
 //     "/" +
